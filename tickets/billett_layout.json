@@ -1,0 +1,20 @@
+{
+  "billettnr-0": { "top": "20px", "left": "20px", "fontSize": "14px" },
+  "navn-0":      { "top": "83px", "left": "20px", "fontSize": "14px" },
+  "pris-0":      { "top": "120px", "left": "20px", "fontSize": "14px" },
+
+  "kjopsdato-0": { "top": "180px", "left": "20px", "fontSize": "14px" },
+
+  "band-0":      { "top": "40px",  "left": "50%", "fontSize": "26px" },
+  "tour-0":      { "top": "85px",  "left": "50%", "fontSize": "22px" },
+  "venue-0":     { "top": "120px", "left": "50%", "fontSize": "22px" },
+  "date-0":      { "top": "160px", "left": "50%", "fontSize": "20px" },
+
+  "reftext-0":   { "top": "205px", "left": "50%", "fontSize": "12px" },
+
+  "eventid-0":   { "top": "20px", "left": "535px", "fontSize": "14px", "fontWeight": "bold" },
+
+  "qr-0":        { "top": "55px", "left": "548px" },
+
+  "site-0":      { "top": "195px", "left": "541px", "fontSize": "12px" }
+}
