@@ -15,14 +15,25 @@ import ticketRoutes from "./src/routes/route.tickets";
 import userRoutes from "./src/routes/route.users";
 import settingsRoutes from "./src/routes/route.settings";
 import contactRoutes from "./src/routes/route.contact";
-import { createAdmin } from "./src/controllers/authcontroller";
 import artistsRoutes from "./src/routes/route.artists";
 import pagesRoutes from "./src/routes/route.pages";
 
+import { createAdmin } from "./src/controllers/authcontroller";
 
 const app = express();
+
+// -------------------------------------
+// MIDDLEWARE
+// -------------------------------------
 app.use(cors());
 app.use(express.json());
+
+// -------------------------------------
+// BASIC ROOT ROUTE (for testing Render)
+// -------------------------------------
+app.get("/", (req, res) => {
+  res.send("🚀 Larvik Rockeklubb Backend is running!");
+});
 
 // -------------------------------------
 // ROUTES REGISTER
@@ -38,7 +49,6 @@ app.use("/api/settings", settingsRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/artists", artistsRoutes);
 app.use("/api/pages", pagesRoutes);
-
 
 // -------------------------------------
 // DATABASE CONNECT + SYNC
