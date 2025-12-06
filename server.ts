@@ -17,6 +17,7 @@ import settingsRoutes from "./src/routes/route.settings";
 import contactRoutes from "./src/routes/route.contact";
 import { createAdmin } from "./src/controllers/authcontroller";
 import artistsRoutes from "./src/routes/route.artists";
+import pagesRoutes from "./src/routes/route.pages";
 
 
 const app = express();
@@ -36,6 +37,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/settings", settingsRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/artists", artistsRoutes);
+app.use("/api/pages", pagesRoutes);
 
 
 // -------------------------------------
