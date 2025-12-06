@@ -13,7 +13,9 @@ export const getSettings = async (req: Request, res: Response) => {
       heroTitle: "Velkommen til Larvik Rockeklubb",
       heroSubtitle: "Opplev rockmusikk og klubbstemning i Larvik!",
       newsletterText: "Meld deg på vårt nyhetsbrev",
-      footerText: "© 2025 Larvik Rockeklubb. Alle rettigheter forbeholdt."
+      footerText: "© 2025 Larvik Rockeklubb. Alle rettigheter forbeholdt.",
+      facebook: "https://www.facebook.com/Larvikrockeklubb/",
+      instagram: "https://www.instagram.com/larvikrockeklubb/",
     });
   }
 

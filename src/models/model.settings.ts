@@ -10,6 +10,8 @@ class Settings extends Model {
   public heroSubtitle!: string | null;
   public newsletterText!: string | null;
   public footerText!: string | null;
+  public facebook!: string | null;
+  public instagram!: string | null;
 }
 
 Settings.init(
@@ -25,6 +27,9 @@ Settings.init(
 
     newsletterText: { type: DataTypes.STRING, allowNull: true },
     footerText: { type: DataTypes.STRING, allowNull: true },
+
+    facebook: { type: DataTypes.STRING, allowNull: true },
+    instagram: { type: DataTypes.STRING, allowNull: true },
   },
   {
     sequelize,
