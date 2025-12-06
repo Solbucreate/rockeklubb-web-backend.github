@@ -6,6 +6,7 @@ class Page extends Model {
   public title!: string;
   public slug!: string;
   public content!: string;
+  public image!: string | null; // new
 }
 
 Page.init(
@@ -30,6 +31,11 @@ Page.init(
     content: {
       type: DataTypes.TEXT,
       allowNull: false,
+    },
+
+    image: {
+      type: DataTypes.STRING,
+      allowNull: true, // matcher databasen
     }
   },
   {
