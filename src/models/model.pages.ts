@@ -1,12 +1,11 @@
-import { Model, DataTypes } from "sequelize";
+import { DataTypes, Model } from "sequelize";
 import sequelize from "../config/db";
 
 class Page extends Model {
   public id!: number;
-  public slug!: string;
   public title!: string;
+  public slug!: string;
   public content!: string;
-  public image!: string | null;
 }
 
 Page.init(
@@ -17,32 +16,25 @@ Page.init(
       primaryKey: true,
     },
 
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+
     slug: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
     },
 
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-
     content: {
       type: DataTypes.TEXT,
       allowNull: false,
-    },
-
-    image: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
+    }
   },
   {
     sequelize,
     tableName: "pages",
-    modelName: "Page",
-    timestamps: false,
   }
 );
 
