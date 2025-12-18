@@ -11,6 +11,7 @@ class Event extends Model {
   public price!: number;
   public capacity!: number;
   public ticketsAvailable!: number;
+  public image!: string | null;
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
 }
@@ -61,6 +62,11 @@ Event.init(
     ticketsAvailable: {
       type: DataTypes.INTEGER,
       allowNull: false,
+    },
+
+    image: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   },
   {

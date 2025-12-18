@@ -6,32 +6,17 @@ import {
   updateEvent,
   deleteEvent
 } from "../controllers/eventscontroller";
+import { requireAdmin } from "../middleware/auth";
 
 const router = Router();
 
-// --------------------------------------------------
-// GET all events
-// --------------------------------------------------
+// PUBLIC
 router.get("/", getAllEvents);
-
-// --------------------------------------------------
-// GET event by ID
-// --------------------------------------------------
 router.get("/:id", getEventById);
 
-// --------------------------------------------------
-// CREATE event
-// --------------------------------------------------
-router.post("/", createEvent);
-
-// --------------------------------------------------
-// UPDATE event
-// --------------------------------------------------
-router.put("/:id", updateEvent);
-
-// --------------------------------------------------
-// DELETE event
-// --------------------------------------------------
-router.delete("/:id", deleteEvent);
+// ADMIN
+router.post("/", requireAdmin, createEvent);
+router.put("/:id", requireAdmin, updateEvent);
+router.delete("/:id", requireAdmin, deleteEvent);
 
 export default router;
